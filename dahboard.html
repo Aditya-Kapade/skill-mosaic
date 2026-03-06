@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Mosaic - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3c83f6",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101722",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 sm:px-8 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">grid_view</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Skill Mosaic</h1>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-semibold text-primary border-b-2 border-primary pb-1" href="dahboard.html">Dashboard</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors pb-1" href="problem.html">Problem Statement</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors pb-1" href="profile.html">Profile</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors pb-1" href="result.html">Result</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors pb-1" href="verify.html">Verify</a>
+<a class="flex items-center gap-1 text-sm font-semibold text-slate-500 hover:text-red-500 transition-colors pb-1" href="login.html">
+<span class="material-symbols-outlined text-sm">logout</span>
+                Logout
+            </a>
+</div>
+<button class="md:hidden material-symbols-outlined text-slate-600 dark:text-slate-300">menu</button>
+</nav>
+<!-- Main Content Area -->
+<main class="max-w-7xl mx-auto px-4 sm:px-8 py-8">
+<!-- Header Section -->
+<div class="mb-10">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Welcome, Aditya</h2>
+<p class="text-slate-500 dark:text-slate-400">Ready to level up? Choose a skill and start your assessment.</p>
+</div>
+<!-- Skills Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Skill Card: DSA -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">account_tree</span>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-full">Beginner</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">DSA</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Data Structures &amp; Algorithms</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-slate-500">Progress:</span>
+<span class="text-primary">0%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+<button class="w-full mt-2 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2">
+                    Start Skill
+                </button>
+</div>
+<!-- Skill Card: Web Dev -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">language</span>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-full">Beginner</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Web Dev</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Frontend &amp; Backend Engineering</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-slate-500">Progress:</span>
+<span class="text-primary">15%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<button class="w-full mt-2 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2">
+                    Start Skill
+                </button>
+</div>
+<!-- Skill Card: Cloud -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">cloud</span>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-full">Beginner</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Cloud</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">AWS, Azure &amp; Cloud Computing</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-slate-500">Progress:</span>
+<span class="text-primary">0%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+<button class="w-full mt-2 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2">
+                    Start Skill
+                </button>
+</div>
+<!-- Skill Card: DBMS -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">database</span>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-full">Beginner</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">DBMS</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Relational &amp; NoSQL Systems</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-slate-500">Progress:</span>
+<span class="text-primary">40%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 40%"></div>
+</div>
+</div>
+<button class="w-full mt-2 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2">
+                    Start Skill
+                </button>
+</div>
+<!-- Skill Card: AI -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">memory</span>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-full">Beginner</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">AI</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Machine Learning &amp; Neural Nets</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-slate-500">Progress:</span>
+<span class="text-primary">5%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 5%"></div>
+</div>
+</div>
+<button class="w-full mt-2 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2">
+                    Start Skill
+                </button>
+</div>
+<!-- Skill Card: Java -->
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">coffee</span>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-full">Beginner</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Java</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Object Oriented Programming</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-slate-500">Progress:</span>
+<span class="text-primary">0%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+<button class="w-full mt-2 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2">
+                    Start Skill
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 pb-6 pt-3 flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">verified</span>
+<span class="text-[10px] font-bold">Verify</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-[10px] font-bold">Logout</span>
+</a>
+</div>
+<script>
+async function loadDashboard() {
+  try {
+    const profileResponse = await fetch('/api/profile');
+    const profile = await profileResponse.json();
+    // Update welcome message or something
+    console.log('Loaded profile:', profile);
+  } catch (error) {
+    console.error('Error loading dashboard:', error);
+  }
+}
+loadDashboard();
+</script>
+</body></html>

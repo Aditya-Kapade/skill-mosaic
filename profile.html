@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Candidate Public Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#3c83f6",
+                "background-light": "#f5f7f8",
+                "background-dark": "#101722",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Navigation Header -->
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg">
+<svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Platform</span>
+</div>
+<div class="hidden md:block relative group">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-symbols-outlined text-xl">search</span>
+</span>
+<input class="block w-64 pl-10 pr-3 py-2 border-none bg-slate-100 dark:bg-slate-800 rounded-xl focus:ring-2 focus:ring-primary text-sm placeholder-slate-500" placeholder="Search skills or candidates" type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="dahboard.html">Dashboard</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="problem.html">Problem Statement</a>
+<a class="text-sm font-semibold text-primary border-b-2 border-primary pb-1" href="profile.html">Profile</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="result.html">Result</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="verify.html">Verify</a>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden border-2 border-primary/20">
+<img alt="User avatar" data-alt="Portrait of a smiling professional software engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa6pvA4BcNwEyIURdsGioCGGJiT37toWwYOkBZHXi8qaOOTWcKmtTygzbDdhub1FXc-YKTkf-dIvMd28vzMwqW1X-lvbD8NqWnQg3QT3lUy6Q52--hQIPHpYUXOapSHas0nEHbqif9dryGnEXMjdWKcbOSAWXpSjdnoCb9rZY7az1ulGN6MqbebE7kCA8iqEbNE9ySKTUTpuXWS5Vix04CnrPd6XgfLFwAUuEu7_CyiYP5oAsxZN2vFXlwtQaT8UMFf_ZlTKzo6sk"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<!-- Profile Hero Section -->
+<section class="flex flex-col md:flex-row items-center md:items-start gap-6 mb-12">
+<div class="relative">
+<div class="h-32 w-32 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl">
+<img alt="John Doe profile" class="h-full w-full object-cover" data-alt="Professional headshot of John Doe software engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg3pvOj5hJr8z3ueMTGvAnYf92aUxgmrSuThQjjW_WWjzWa7wjFYBwRbtr-XmuKOPk5ch2vJ-RnV8zHAqwKhi5sPPcRwZzzV8cUKhE1yVsP2qKW6z7gzHzJujxv4RvCg8SVtLYGi5VUY5Sun5cuo-z-mulCXuYxK6m_hffFa3mlRK-L9rsA78nDtEL6OZ0EdNOSYSdjAq2L6swuBghVEpN1J8cKo2YTisJ7YqtBgMeEXmrDj9iyAiR7sgbZhHzbSyhFsiZXHC9Iig"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-green-500 h-6 w-6 rounded-full border-4 border-white dark:border-slate-900" title="Online"></div>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-1">John Doe</h1>
+<div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-slate-600 dark:text-slate-400">
+<span class="flex items-center justify-center md:justify-start gap-1">
+<span class="material-symbols-outlined text-lg">work</span> Software Engineer
+                    </span>
+<span class="hidden md:block text-slate-300">|</span>
+<span class="flex items-center justify-center md:justify-start gap-1">
+<span class="material-symbols-outlined text-lg">location_on</span> San Francisco, CA
+                    </span>
+</div>
+</div>
+</section>
+<!-- Public Skill Profile Header -->
+<section class="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="max-w-2xl">
+<h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3">Public Skill Profile</h2>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                        Showcase your verified technical expertise and certifications to potential employers. Your profile highlights real-world problem-solving skills validated through our rigorous testing platform.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-3 shrink-0">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">share</span> Share Profile
+                    </button>
+<button class="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span> Download CV
+                    </button>
+</div>
+</div>
+</section>
+<!-- Verified Skills Section -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                    Verified Skills <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">3 Active</span>
+</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Skill Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Skill Verified!
+                            </span>
+<span class="text-slate-400">
+<span class="material-symbols-outlined">more_horiz</span>
+</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-4">DSA (Algorithms)</h4>
+<div class="space-y-4 mb-6">
+<div>
+<div class="flex justify-between text-sm mb-1.5">
+<span class="text-slate-500 dark:text-slate-400">Proficiency Score</span>
+<span class="font-bold text-slate-900 dark:text-white">85/100</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+<span class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">shield</span> Integrity Status
+                                </span>
+<span class="text-sm font-bold text-green-600 dark:text-green-400 uppercase tracking-tighter">Clear</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                                View Report
+                            </button>
+<button class="flex-1 bg-primary/10 hover:bg-primary/20 text-primary py-2 rounded-lg text-sm font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-base">card_membership</span> Certificate
+                            </button>
+</div>
+</div>
+</div>
+<!-- Skill Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Skill Verified!
+                            </span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-4">React.js Advanced</h4>
+<div class="space-y-4 mb-6">
+<div>
+<div class="flex justify-between text-sm mb-1.5">
+<span class="text-slate-500 dark:text-slate-400">Proficiency Score</span>
+<span class="font-bold text-slate-900 dark:text-white">92/100</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+<span class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">shield</span> Integrity Status
+                                </span>
+<span class="text-sm font-bold text-green-600 dark:text-green-400 uppercase tracking-tighter">Clear</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                                View Report
+                            </button>
+<button class="flex-1 bg-primary/10 hover:bg-primary/20 text-primary py-2 rounded-lg text-sm font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-base">card_membership</span> Certificate
+                            </button>
+</div>
+</div>
+</div>
+<!-- Skill Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Skill Verified!
+                            </span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-4">System Design</h4>
+<div class="space-y-4 mb-6">
+<div>
+<div class="flex justify-between text-sm mb-1.5">
+<span class="text-slate-500 dark:text-slate-400">Proficiency Score</span>
+<span class="font-bold text-slate-900 dark:text-white">78/100</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+<span class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">shield</span> Integrity Status
+                                </span>
+<span class="text-sm font-bold text-green-600 dark:text-green-400 uppercase tracking-tighter">Clear</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                                View Report
+                            </button>
+<button class="flex-1 bg-primary/10 hover:bg-primary/20 text-primary py-2 rounded-lg text-sm font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-base">card_membership</span> Certificate
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-12 mt-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-1.5 rounded-lg">
+<svg class="w-5 h-5 text-primary" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-sm font-bold text-slate-500">Platform © 2024</span>
+</div>
+<div class="flex items-center gap-8 text-sm font-medium text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Help Center</a>
+</div>
+<div class="flex gap-4">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">language</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">share</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+<script>
+async function loadProfile() {
+  try {
+    const response = await fetch('/api/profile');
+    const profile = await response.json();
+    // Update the page with profile data
+    document.querySelector('h1').textContent = profile.name;
+    // Add more updates as needed
+  } catch (error) {
+    console.error('Error loading profile:', error);
+  }
+}
+loadProfile();
+</script>
+</body></html>

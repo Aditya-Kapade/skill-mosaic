@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Test - Two Sum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                        "editor-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["Fira Code", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-line::before {
+            content: attr(data-line);
+            display: inline-block;
+            width: 2rem;
+            margin-right: 1rem;
+            color: #64748b;
+            text-align: right;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 h-screen overflow-hidden flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-3 shrink-0">
+<div class="flex items-center gap-4">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold tracking-tight">Skill Test</h2>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="dahboard.html">Dashboard</a>
+<a class="text-sm font-semibold text-primary border-b-2 border-primary pb-1" href="problem.html">Problem Statement</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="profile.html">Profile</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="result.html">Result</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="verify.html">Verify</a>
+<div class="flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full font-bold">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>25:00</span>
+</div>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-500">settings</span>
+</button>
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="User profile placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEaA-x8MYid3_EwFH7ciEUy38laBGdO86M-Ajm9hlP-DfL95uyrjWAwZ_c-bAFevG9wFn5yEusDfYGLhc3Je8VQjXEdFj9LxcvIg60j-I0s2sZgUcYx054T_jEVJu3EdsyXvFnNUv9mfyQn2nfUj8qn5CYGHN84RbRpKegCHb3itZTzEsiV39y8bHMBmmf6I_mSWOj5r4z2qROB0rSkpKBrk19cKMgR2BPcbwKUCrGqaFmS2P7sLk-5ta_B2Y2l7O70eSV7EKii7U"/>
+</div>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<!-- Left Panel: Problem Statement -->
+<div class="w-1/2 flex flex-col bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 overflow-y-auto">
+<div class="p-8 max-w-2xl mx-auto w-full">
+<!-- Progress Header -->
+<div class="flex flex-col gap-3 mb-8">
+<div class="flex justify-between items-center">
+<span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Progress</span>
+<span class="text-sm font-bold text-primary">1 / 3</span>
+</div>
+<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 33%;"></div>
+</div>
+</div>
+<!-- Content -->
+<div class="space-y-6">
+<div>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Two Sum</h1>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">Easy</span>
+</div>
+<div class="prose prose-slate dark:prose-invert">
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Given an array of integers <code class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-primary">nums</code> and an integer <code class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-primary">target</code>, return indices of the two numbers such that they add up to target.
+                        </p>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
+                            You may assume that each input would have exactly one solution, and you may not use the same element twice.
+                        </p>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Constraints</h3>
+<ul class="list-disc list-inside text-slate-600 dark:text-slate-400 space-y-2 text-sm">
+<li>2 ≤ nums.length ≤ 10<sup>4</sup></li>
+<li>-10<sup>9</sup> ≤ nums[i] ≤ 10<sup>9</sup></li>
+<li>-10<sup>9</sup> ≤ target ≤ 10<sup>9</sup></li>
+<li>Only one valid answer exists.</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Examples</h3>
+<div class="space-y-4">
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-800">
+<p class="text-sm font-bold text-slate-500 mb-2">Example 1:</p>
+<div class="space-y-1 font-mono text-sm">
+<p><span class="text-slate-400">Input:</span> nums = [2,7,11,15], target = 9</p>
+<p><span class="text-slate-400">Output:</span> [0,1]</p>
+<p><span class="text-slate-400">Explanation:</span> Because nums[0] + nums[1] == 9, we return [0, 1].</p>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-800">
+<p class="text-sm font-bold text-slate-500 mb-2">Example 2:</p>
+<div class="space-y-1 font-mono text-sm">
+<p><span class="text-slate-400">Input:</span> nums = [3,2,4], target = 6</p>
+<p><span class="text-slate-400">Output:</span> [1,2]</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Code Editor -->
+<div class="w-1/2 flex flex-col bg-slate-900 overflow-hidden">
+<!-- Editor Header -->
+<div class="flex items-center justify-between px-4 py-2 bg-slate-800/50 border-b border-slate-700">
+<div class="flex items-center gap-4">
+<span class="text-slate-400 text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">code</span> Code Editor
+                    </span>
+<div class="relative">
+<select class="appearance-none bg-slate-700 border-none text-slate-200 text-xs rounded-md py-1.5 pl-3 pr-8 focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Python 3</option>
+<option>Java</option>
+<option>C++</option>
+<option>JavaScript</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1.5 hover:bg-slate-700 rounded text-slate-400 transition-colors">
+<span class="material-symbols-outlined text-sm">refresh</span>
+</button>
+<button class="p-1.5 hover:bg-slate-700 rounded text-slate-400 transition-colors">
+<span class="material-symbols-outlined text-sm">settings</span>
+</button>
+</div>
+</div>
+<!-- Code Area -->
+<div class="flex-1 overflow-auto bg-slate-900 p-4 font-mono text-sm leading-relaxed">
+<div class="code-line" data-line="1"><span class="text-purple-400">class</span> <span class="text-yellow-400">Solution</span>:</div>
+<div class="code-line" data-line="2"><span class="inline-block w-4"></span><span class="text-purple-400">def</span> <span class="text-blue-400">twoSum</span>(self, nums: List[int], target: int) -&gt; List[int]:</div>
+<div class="code-line" data-line="3"><span class="inline-block w-8"></span><span class="text-slate-500"># Create a dictionary to store indices</span></div>
+<div class="code-line" data-line="4"><span class="inline-block w-8"></span>prevMap = {} <span class="text-slate-500"># val : index</span></div>
+<div class="code-line" data-line="5"><span class="inline-block w-8"></span></div>
+<div class="code-line" data-line="6"><span class="inline-block w-8"></span><span class="text-purple-400">for</span> i, n <span class="text-purple-400">in</span> <span class="text-blue-400">enumerate</span>(nums):</div>
+<div class="code-line" data-line="7"><span class="inline-block w-12"></span>diff = target - n</div>
+<div class="code-line" data-line="8"><span class="inline-block w-12"></span><span class="text-purple-400">if</span> diff <span class="text-purple-400">in</span> prevMap:</div>
+<div class="code-line" data-line="9"><span class="inline-block w-16"></span><span class="text-purple-400">return</span> [prevMap[diff], i]</div>
+<div class="code-line" data-line="10"><span class="inline-block w-12"></span>prevMap[n] = i</div>
+<div class="code-line" data-line="11"><span class="inline-block w-8"></span><span class="text-purple-400">return</span> []</div>
+<div class="h-4"></div>
+<div class="inline-block w-4 h-5 bg-primary/40 animate-pulse align-middle"></div>
+</div>
+<!-- Editor Footer -->
+<div class="px-6 py-4 bg-slate-800/80 border-t border-slate-700 flex justify-between items-center">
+<button class="text-slate-400 hover:text-white flex items-center gap-2 text-sm font-medium transition-colors">
+                    Console <span class="material-symbols-outlined text-xs">keyboard_arrow_up</span>
+</button>
+<div class="flex gap-3">
+<button class="px-5 py-2 rounded-lg font-bold text-sm bg-slate-700 text-slate-200 hover:bg-slate-600 transition-colors">
+                        Run Code
+                    </button>
+<button class="px-6 py-2 rounded-lg font-bold text-sm bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                        Submit
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<script>
+document.querySelector('button:last-child').addEventListener('click', async () => {
+  const code = document.querySelector('textarea')?.value || 'sample code';
+  const problemId = 1; // Assume first problem
+  try {
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ problemId, code })
+    });
+    const result = await response.json();
+    alert(result.message);
+    if (result.success) {
+      window.location.href = 'result.html';
+    }
+  } catch (error) {
+    alert('Error submitting: ' + error.message);
+  }
+});
+</script>
+</body></html>

@@ -1,0 +1,12 @@
+{
+  "name": "skill-mosaic",
+  "version": "1.0.0",
+  "description": "Skill Mosaic platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.6.2"
+  }
+}

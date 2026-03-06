@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4 lg:px-40">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-8 bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Submission Result</h2>
+</div>
+<div class="flex gap-3">
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="dahboard.html">Dashboard</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="problem.html">Problem Statement</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="profile.html">Profile</a>
+<a class="text-sm font-semibold text-primary border-b-2 border-primary pb-1" href="result.html">Result</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="verify.html">Verify</a>
+<button class="flex items-center justify-center rounded-lg h-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 px-3 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<main class="px-6 py-8 lg:px-40 flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 gap-6">
+<!-- Main Result Card -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Left Column: Performance Metrics -->
+<div class="flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-800">
+<div>
+<h3 class="text-lg font-bold mb-4">Performance Metrics</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-slate-800">
+<span class="text-slate-500 dark:text-slate-400 text-sm">Test Cases Passed</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">8/10</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-slate-800">
+<span class="text-slate-500 dark:text-slate-400 text-sm">Execution Time</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">1.2s</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-slate-800">
+<span class="text-slate-500 dark:text-slate-400 text-sm">Memory Usage</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">24.5 MB</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-bold">Overall Score</span>
+<span class="text-primary font-bold text-lg">82/100</span>
+</div>
+</div>
+</div>
+<!-- Mini Chart/Visual Representation -->
+<div class="w-full h-40 bg-slate-50 dark:bg-slate-800/50 rounded-lg flex items-center justify-center overflow-hidden border border-dashed border-slate-300 dark:border-slate-700">
+<div class="relative w-32 h-32 rounded-full border-[10px] border-slate-200 dark:border-slate-700 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full border-[10px] border-primary border-t-transparent border-l-transparent rotate-45"></div>
+<span class="text-2xl font-bold">82%</span>
+</div>
+</div>
+</div>
+<!-- Right Column: AI Feedback & Summary -->
+<div class="flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center justify-center py-4 bg-primary/5 dark:bg-primary/10 rounded-lg border border-primary/20">
+<p class="text-primary text-4xl font-black leading-tight">82/100</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium mt-1">Submission Grade</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold">Completion Progress</p>
+<p class="text-primary text-sm font-bold">82%</p>
+</div>
+<div class="h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all" style="width: 82%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<h3 class="text-slate-900 dark:text-slate-100 font-bold">AI Feedback</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex gap-3 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-amber-500 text-lg">lightbulb</span>
+<span>Improve variable naming in the main processing loop for better readability.</span>
+</li>
+<li class="flex gap-3 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-amber-500 text-lg">lightbulb</span>
+<span>Consider edge cases where the input array might be empty.</span>
+</li>
+<li class="flex gap-3 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span>Great use of modular functions to separate concerns.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-slate-100">Status: Passed</p>
+<p class="text-xs text-slate-500">Submission successfully validated</p>
+</div>
+</div>
+<div class="flex gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-6 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                            View Code
+                        </button>
+<button class="flex-1 sm:flex-none px-8 py-2.5 rounded-lg bg-primary text-white font-bold text-sm shadow-md shadow-primary/20 hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">refresh</span>
+                            Retry Task
+                        </button>
+</div>
+</div>
+<!-- Recommended Resources -->
+<div class="mt-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4 px-1">Recommended Learning</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="group cursor-pointer bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-colors">
+<div class="aspect-video w-full bg-slate-100 dark:bg-slate-800 rounded-lg mb-3 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform" data-alt="Abstract visualization of memory optimization concept" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQkEtFPwxwXhUEJ4DrX9r6WCZaVgazCNGY111lpusYtjF-RMGd4jQNoCWnqd14gbVGsYkfLY4JuVSEdqS4XkEN51bPpX-tkbSKACGyjSs51j0nWJAsJX2GzJ165y-nc_jHKOg8vMZyCh40oFQMNRlCeDU_RAYrvBw3CSWkmAAhDZ5_OROP2HINnZ5YNhVlBiUYwC55jpBOfaZPg1h7229BNR6uAupW1dKL5mXQUPGSFADj-XMY2bjZrwQGshCbprpnU-QIcdugaos')"></div>
+</div>
+<p class="font-bold text-sm group-hover:text-primary transition-colors">Memory Optimization in JS</p>
+<p class="text-xs text-slate-500 mt-1">8 min read • Intermediate</p>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-colors">
+<div class="aspect-video w-full bg-slate-100 dark:bg-slate-800 rounded-lg mb-3 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform" data-alt="Code snippet showing clean naming conventions" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0gNSZiErUok5LL01tKzGfRhkuDidSgIZuDk81ah8eNSb0DeViXy4p4vS2QerShmyU80ytTi2YrQAZ3JzICQRD0_0qSJuuCkSk5x9N-t1yoy1xbbXjLRSNvhV9edQoaoG0AvOPz_yicls1Y-strQzo30cs8fHMZ3Tvl6mFsGsLN2iYznP2dUmOlY240pcpqJ3oHCTQmTzu12oEF6BuXOZhTWQ7QhNbku5hFYn02nI54oKCOjcdMhsFjfWYvXz2Tl_lP_VAWr5bV6o')"></div>
+</div>
+<p class="font-bold text-sm group-hover:text-primary transition-colors">Clean Code: Naming Rules</p>
+<p class="text-xs text-slate-500 mt-1">12 min read • Beginner</p>
+</div>
+<div class="group cursor-pointer bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-colors">
+<div class="aspect-video w-full bg-slate-100 dark:bg-slate-800 rounded-lg mb-3 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform" data-alt="Graph illustrating algorithmic complexity and Big O" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnC-5PsmYyo7JkxZJ6vyKa_Zwei3mvSMpZtI2w-M8kw8wyHTVbuusS012v41WmIaxTCGO3WWNHSYl6774MR86nb7sm0F-ONW6EmuZ8OWmZB3ir82V-KM06rxHQPECjnZK6ww-wgMpId3QV-gNKbJlV8EH3OeI9B90XSsKcdtTYz2g26OleeDN8fC3Jamx80IgifNwu7P8Yke04p_vhSSuMnTyima6loiBM9rx9egPPBLR0UK6wt2Gy4WtG0d0-dbhiveWNDoZUEBg')"></div>
+</div>
+<p class="font-bold text-sm group-hover:text-primary transition-colors">Understanding Complexity</p>
+<p class="text-xs text-slate-500 mt-1">15 min video • Advanced</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

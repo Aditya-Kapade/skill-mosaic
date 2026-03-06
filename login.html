@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - Skill Mosaic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex flex-col min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined block">auto_awesome_mosaic</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-extrabold tracking-tight">Skill Mosaic</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Features</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+</div>
+<div class="flex gap-3">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="dahboard.html">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="problem.html">Problem Statement</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="profile.html">Profile</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="result.html">Result</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="verify.html">Verify</a>
+<button class="flex min-w-[100px] items-center justify-center rounded-xl h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-blue-600 transition-all">
+                    Sign Up
+                </button>
+<button class="flex min-w-[100px] items-center justify-center rounded-xl h-10 px-5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold hover:bg-slate-200 transition-all">
+                    Login
+                </button>
+</div>
+</header>
+<main class="flex-1 flex items-center justify-center p-6 lg:p-12">
+<div class="w-full max-w-[1280px] grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+<!-- Left Column: Features -->
+<div class="flex flex-col gap-8 order-2 md:order-1">
+<div class="space-y-2 mb-4">
+<h1 class="text-4xl font-black text-slate-900 dark:text-white leading-tight">Welcome back to Skill Mosaic</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">The complete platform for skills-based hiring.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4 p-4 rounded-3xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-white/20">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-2xl text-primary">
+<span class="material-symbols-outlined text-3xl">shield</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white text-lg leading-tight">Verified Security</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Your data is protected by industry-standard encryption protocols.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-3xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-white/20">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-2xl text-primary">
+<span class="material-symbols-outlined text-3xl">smart_toy</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white text-lg leading-tight">AI Matching</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Our robot assistant helps find the perfect candidates for your team.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-3xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-white/20">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-2xl text-primary">
+<span class="material-symbols-outlined text-3xl">track_changes</span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white text-lg leading-tight">Smart Tracking</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Track application progress in real-time with our advanced dashboard.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Middle Column: Login Card -->
+<div class="order-1 md:order-2 flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-2xl shadow-slate-200 dark:shadow-black/40 p-8 lg:p-10 border border-slate-100 dark:border-slate-800">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Login to your account</h2>
+<p class="text-slate-500 dark:text-slate-400">Enter your credentials to access your dashboard</p>
+</div>
+<form class="space-y-5">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Email Address</label>
+<input class="w-full px-5 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-primary outline-none transition-all text-slate-900 dark:text-white" placeholder="name@company.com" type="email" name="email"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center ml-1">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Password</label>
+<a class="text-xs font-bold text-primary hover:underline" href="#">Forgot?</a>
+</div>
+<input class="w-full px-5 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-primary outline-none transition-all text-slate-900 dark:text-white" placeholder="••••••••" type="password" name="password"/>
+</div>
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-2xl shadow-xl shadow-primary/25 transition-all transform active:scale-[0.98]" type="submit">
+                                Sign In
+                            </button>
+</form>
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center"><span class="w-full border-t border-slate-200 dark:border-slate-700"></span></div>
+<div class="relative flex justify-center text-xs uppercase"><span class="bg-white dark:bg-slate-900 px-3 text-slate-400 font-bold">Or continue with</span></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<img alt="Google" class="w-5 h-5" data-alt="Google logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR7rWPiJk6RSk5U8tNberZuIt5gDEYFvzqN9ScRjkLA-JXwC-VIm66dgtJmaLxf6hhoD3qT_gi7NR0JThBRP-DmXekR-3rUKk1t9Bz4ldydYVopbYnbuFTsAPaa_yOqC8XAZEpl7d8mcsFj0MyrEhn_Hv1h6ZDhyOK2GR8oCuK1ADkxJ1bH7I5gfv1iOevSR2olvIKzHQ9QiGte6s9xEijbZ1-XyIzDnL9TZYv2kz2tl28o-HmNr9FG0KZ5BN1_CbjNmARkxP7AnU"/>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<img alt="GitHub" class="w-5 h-5" data-alt="GitHub logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3vL27NeEZfUO1XtUb6X4D4nF_8fO9Bz5zZN4S3N-w2F72bNUX9Q0byRlafrPccCEsBObsst_AV_ZukUL75BylGIJV5m1sVffAi4WUws1voaA1ysvP_J1cVzZwWQPTJgVdFbgrAdnhiywxs_26HU59__H-c-K5Yq2FX2gy5LbdUwOEljmS8ebru_3-2seSx9Vh6o9tvV_2mJci6rmfA8jvVSAg84wKQwTtWkvI64cwg01_TOoPqqr1XKyi4QoTI0H2EQ-Yf3WGUkI"/>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">GitHub</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Role Selection -->
+<div class="order-3 flex flex-col gap-6">
+<div class="bg-white/40 dark:bg-slate-900/40 rounded-[2.5rem] p-8 border border-white/20 backdrop-blur-md">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Select your role</h3>
+<div class="space-y-3">
+<label class="group flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-transparent hover:border-primary/50 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="font-bold text-slate-700 dark:text-slate-200">Candidate</span>
+</div>
+<input checked="" class="w-5 h-5 text-primary border-slate-300 focus:ring-primary" name="role" type="radio" value="candidate"/>
+</label>
+<label class="group flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-transparent hover:border-primary/50 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">business_center</span>
+</div>
+<span class="font-bold text-slate-700 dark:text-slate-200">Recruiter</span>
+</div>
+<input class="w-5 h-5 text-primary border-slate-300 focus:ring-primary" name="role" type="radio" value="recruiter"/>
+</label>
+<label class="group flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-transparent hover:border-primary/50 cursor-pointer transition-all shadow-sm">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">admin_panel_settings</span>
+</div>
+<span class="font-bold text-slate-700 dark:text-slate-200">Admin</span>
+</div>
+<input class="w-5 h-5 text-primary border-slate-300 focus:ring-primary" name="role" type="radio" value="admin"/>
+</label>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Login Benefits</h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                                    Access to personalized skill assessments
+                                </li>
+<li class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                                    Direct communication with top companies
+                                </li>
+<li class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                                    Custom portfolio and skill tracking
+                                </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="py-8 px-6 text-center text-slate-400 text-sm">
+<p>© 2024 Skill Mosaic Inc. All rights reserved.</p>
+</footer>
+</div>
+<script>
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const email = formData.get('email');
+  const password = formData.get('password');
+  // role radios are outside the form, so query manually
+  const roleInput = document.querySelector('input[name="role"]:checked');
+  const role = roleInput ? roleInput.value : '';
+  try {
+    const response = await fetch('/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password, role })
+    });
+    const result = await response.json();
+    if (result.success) {
+      alert(result.message);
+      window.location.href = 'dahboard.html';
+    } else {
+      alert(result.message);
+    }
+  } catch (error) {
+    alert('Error: ' + error.message);
+  }
+});
+</script>
+</body></html>
